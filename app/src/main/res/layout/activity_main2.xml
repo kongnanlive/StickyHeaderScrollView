@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.HeaderScrollView.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Theme.HeaderScrollView.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.kongnan.headerscrollview.HeaderScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.kongnan.headerscrollview.StickyLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="AAAAAAAAAAAAAAAAAAAAAA"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="AAAAAAAAAAAAAAAAAAAAAA"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:id="@+id/remove_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@android:color/background_dark"
+                        android:gravity="center_vertical"
+                        android:text="吸顶View-1"
+                        android:textColor="@color/purple_200"
+                        android:textSize="22sp"
+                        app:isSticky="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="CCCCCCCCCCCCCC"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="DDDDDDDDDDDDDDDDDDDDDDD"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@color/white"
+                        android:text="EEEEEEEEEEEEEEEEEEE"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="FFFFFFFFFFFFFFFFFFFFF"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="HHHHHHHHHHHHHHHH"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@android:color/holo_red_dark"
+                        android:gravity="center_vertical"
+                        android:text="吸顶View-2"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        app:isSticky="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="BBBBBBBBB"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="CCCCCCCCCCCCCC"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="DDDDDDDDDDDDDDDDDDDDDDD"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@color/white"
+                        android:text="EEEEEEEEEEEEEEEEEEE"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="FFFFFFFFFFFFFFFFFFFFF"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@android:color/holo_green_dark"
+                        android:gravity="center_vertical"
+                        android:text="吸顶View-3"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        app:isSticky="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="CCCCCCCCCCCCCC"
+                        android:textColor="@color/purple_700" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:text="DDDDDDDDDDDDDDDDDDDDDDD"
+                        android:textColor="@color/purple_700" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/holo_blue_bright"
+                        app:isSticky="true" />
+
+                </com.kongnan.headerscrollview.StickyLinearLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </com.kongnan.headerscrollview.HeaderScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

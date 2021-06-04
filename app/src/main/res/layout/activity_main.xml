@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kongnan.headerscrollview.HeaderScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.kongnan.headerscrollview.StickyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="AAAAAAAAAAAAAAAAAAAAAA"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="AAAAAAAAAAAAAAAAAAAAAA"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:id="@+id/remove_view"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/background_dark"
+                android:text="BBBBBBBBB"
+                android:textColor="@color/purple_200"
+                app:isSticky="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="CCCCCCCCCCCCCC"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="DDDDDDDDDDDDDDDDDDDDDDD"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/white"
+                android:text="EEEEEEEEEEEEEEEEEEE"
+                android:textColor="@color/purple_700" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="FFFFFFFFFFFFFFFFFFFFF"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="HHHHHHHHHHHHHHHH"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/holo_red_dark"
+                android:text="AAAAAAAAAAAAAAAAAAAAAA"
+                android:textColor="@color/black"
+                app:isSticky="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="BBBBBBBBB"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="CCCCCCCCCCCCCC"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="DDDDDDDDDDDDDDDDDDDDDDD"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/white"
+                android:text="EEEEEEEEEEEEEEEEEEE"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="FFFFFFFFFFFFFFFFFFFFF"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/holo_green_dark"
+                android:text="HHHHHHHHHHHHHHHHHHHHHHHHHH"
+                android:textColor="@color/white"
+                app:isSticky="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="CCCCCCCCCCCCCC"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:text="DDDDDDDDDDDDDDDDDDDDDDD"
+                android:textColor="@color/purple_700" />
+
+
+        </com.kongnan.headerscrollview.StickyLinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</com.kongnan.headerscrollview.HeaderScrollView>
