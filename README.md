@@ -1,4 +1,18 @@
-# StickyHeaderScrollView
+## 前言
+作为[ConsecutiveScroller](https://github.com/donkingliang/ConsecutiveScroller)使用者首先感谢作者提供这个库，但是这个控件有个不能继续使用bug，一直未能没修复，
+
+[#80](https://github.com/donkingliang/ConsecutiveScroller/issues/80) 严重影响了用户体验
+
+虽然评论区我提供了CoordinatorLayout+CollapsingToolbarLayout+AppBarLayout$ScrollingViewBehavior+minHeight（吸顶）解决方案。但是依然不够完美，
+
+首先没有作者这个库ConsecutiveScroller能支持多个吸顶布局。
+
+第二也是非常讨厌的问题在AppBarLayout的视图里面上下滑动，滑动过程会停止一下，这个列表滑动的操作不连续，当然这个问题只有在AppBarLayout的视图非常大的时候才会发现。
+
+我还有一个解决方案就是全部用RecyclerView多布局类型来做，然后重写ItemDecoration来实现吸顶功能，但是这种吸顶使用复杂，还存在视图回收在回来需要重新绑定数据的这种问题。
+
+虽然我不想重复造轮子，但是逼不得已。于是下面这个新的库出现了。
+
 ## 简介
 
 StickyHeaderScrollView是Android下支持吸顶Sticky，滚动布局NestedScrollView嵌套RecyclerView，解决CoordinatorLayout、AppBarLayout快速滑动fling停住卡住回弹抖动等bug。
