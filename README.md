@@ -19,6 +19,9 @@ StickyHeaderScrollView是Android下支持吸顶Sticky，滚动布局NestedScroll
 
 StickyHeaderScrollView支持NestedScrolling机制。
 
+有网友提问scrollview嵌套recyclerview会影响recyclerview 的item复用么\
+答案是当然不会啊！recyclerview的高度是动态计算的，不是无限高度。
+
 ## 效果图
 
 滚动布局NestedScrollView嵌套RecyclerView\
