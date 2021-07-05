@@ -43,7 +43,9 @@ class HeaderScrollView @JvmOverloads constructor(
     /**
      * 嵌套滚动布局的高度
      */
-    private val contentViewHeight get() = if (contentView.isVisible) measuredHeight + headViewHeight else measuredHeight
+    private val contentViewHeight get() = if (contentView.isVisible) measuredHeight + headViewHeight - headViewMinHeight else measuredHeight
+
+    private val headViewMinHeight get() = if (headView.isVisible) headView.minimumHeight else 0
 
     override fun onFinishInflate() {
         super.onFinishInflate()
