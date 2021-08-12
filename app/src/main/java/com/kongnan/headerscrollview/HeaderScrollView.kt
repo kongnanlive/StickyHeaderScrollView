@@ -27,6 +27,7 @@ class HeaderScrollView @JvmOverloads constructor(
 
     init {
         overScrollMode = OVER_SCROLL_NEVER
+        isMotionEventSplittingEnabled = false
     }
 
     private var needInvalidate = false
@@ -139,11 +140,12 @@ class HeaderScrollView @JvmOverloads constructor(
     }
 
     private fun findRecyclerView(contentView: ViewGroup): RecyclerView? {
+        if (contentView is RecyclerView && contentView.javaClass == RecyclerView::class.java) {
+            return contentView
+        }
         for (i in 0 until contentView.childCount) {
             val view = contentView.getChildAt(i)
-            if (view is RecyclerView && view.javaClass == RecyclerView::class.java) {
-                return view
-            } else if (view is ViewGroup) {
+            if (view is ViewGroup) {
                 val target = findRecyclerView(view)
                 if (target != null) {
                     return target
@@ -155,7 +157,12 @@ class HeaderScrollView @JvmOverloads constructor(
 
     override fun startNestedScroll(axes: Int, type: Int): Boolean {
         if (type == ViewCompat.TYPE_TOUCH) {
-            (contentView as? RecyclerView?)?.stopScroll()
+            findRecyclerView(contentView)?.let {
+                if (it.scrollState == RecyclerView.SCROLL_STATE_SETTLING) {
+                    it.stopScroll()
+                }
+                onStopNestedScroll(it, ViewCompat.TYPE_NON_TOUCH)
+            }
         }
         return super.startNestedScroll(axes, type)
     }

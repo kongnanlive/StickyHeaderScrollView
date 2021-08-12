@@ -33,4 +33,15 @@ class MyAdapter(private val data: MutableList<String>) :
         data.addAll(scanResult)
         notifyDataSetChanged()
     }
+
+    companion object {
+
+        fun increase(title: String, size: Int = 100): MutableList<String> {
+            val data = mutableListOf<String>()
+            (1..size).forEach {
+                data.add("$title + $it")
+            }
+            return data
+        }
+    }
 }

@@ -21,7 +21,7 @@ class PlaceholderFragment : Fragment() {
 
     private val pageViewModel: PageViewModel by activityViewModels()
 
-    private val myAdapter = MyAdapter(increase("AAAAAAAAAAAAAAAAAAAAAAAA"))
+    private val myAdapter = MyAdapter(MyAdapter.increase("AAAAAAAAAAAAAAAAAAAAAAAA"))
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,19 +39,11 @@ class PlaceholderFragment : Fragment() {
         pageViewModel.isRefreshing.observe(viewLifecycleOwner) {
             if (it) {
                 view.postDelayed({
-                    myAdapter.updateData(increase("BBBBBBBBBBBBBBBBBBBBBBBBBBB"))
+                    myAdapter.updateData(MyAdapter.increase("BBBBBBBBBBBBBBBBBBBBBBBBBBB"))
                     pageViewModel.isRefreshing.value = false
                 }, 1000)
             }
         }
-    }
-
-    private fun increase(title: String): MutableList<String> {
-        val data = mutableListOf<String>()
-        (0..100).forEach {
-            data.add("$title + $it")
-        }
-        return data
     }
 
     companion object {

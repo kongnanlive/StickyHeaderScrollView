@@ -5,6 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -12,6 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.kongnan.headerscrollview.ui.main.MyAdapter
 import com.kongnan.headerscrollview.ui.main.PageViewModel
 import com.kongnan.headerscrollview.ui.main.SectionsPagerAdapter
 
@@ -51,5 +55,9 @@ class MainActivity2 : AppCompatActivity() {
                 swipeRefreshLayout.isRefreshing = false
             }
         }
+        val recyclerView = findViewById<RecyclerView>(R.id.rv_list)
+        recyclerView.layoutManager = GridLayoutManager(this, 5)
+        recyclerView.adapter = MyAdapter(MyAdapter.increase("RecyclerView", 5))
+        recyclerView.suppressLayout(true)
     }
 }

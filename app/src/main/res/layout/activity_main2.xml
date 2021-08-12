@@ -177,6 +177,12 @@
                         android:text="CCCCCCCCCCCCCC"
                         android:textColor="@color/purple_700" />
 
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:nestedScrollingEnabled="false" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
