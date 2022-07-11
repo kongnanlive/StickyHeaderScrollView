@@ -11,6 +11,7 @@
         android:theme="@style/Theme.HeaderScrollView">
         <activity
             android:name=".MainActivity2"
+            android:exported="true"
             android:label="@string/title_activity_main2"
             android:theme="@style/Theme.HeaderScrollView.NoActionBar">
             <intent-filter>

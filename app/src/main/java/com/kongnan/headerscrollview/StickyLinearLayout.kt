@@ -54,13 +54,15 @@ class StickyLinearLayout @JvmOverloads constructor(
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        var minHeight = 0
         for (i in childCount - 1 downTo 0) {
             val child = getChildAt(i)
             if ((child.layoutParams as LayoutParams).isSticky) {
-                minimumHeight = child.measuredHeight
+                minHeight = child.measuredHeight
                 break
             }
         }
+        minimumHeight = minHeight
     }
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
