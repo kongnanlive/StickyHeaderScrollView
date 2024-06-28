@@ -61,7 +61,7 @@ class HeaderScrollView @JvmOverloads constructor(
                 }
             }
         } else {
-            throw  IllegalStateException("$TAG is designed for nested scrolling and can only have two direct child")
+            throw IllegalStateException("$TAG is designed for nested scrolling and can only have two direct child")
         }
     }
 
@@ -69,7 +69,13 @@ class HeaderScrollView @JvmOverloads constructor(
         val width = MeasureSpec.getSize(widthMeasureSpec)
         val height = MeasureSpec.getSize(heightMeasureSpec)
         setMeasuredDimension(width, height)
-        headView.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED))
+        val isFixedHeight = headView.layoutParams.height != ViewGroup.LayoutParams.WRAP_CONTENT
+        val heightSpec = if (isFixedHeight) {
+            MeasureSpec.makeMeasureSpec(headView.layoutParams.height, MeasureSpec.EXACTLY)
+        } else {
+            MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED)
+        }
+        headView.measure(widthMeasureSpec, heightSpec)
         measureChildren()
     }
 
